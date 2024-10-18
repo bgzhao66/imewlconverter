@@ -78,5 +78,5 @@ PC 端：
 
 命令行：
 ```shell
-./ImeWlConverterCmd -i:rime ./cj5_simp.txt -ct:cangjie -o:rime ./cj5_simp.dict.txt
+dotnet ImeWlConverterCmd.dll -i:rime ./cj5_simp.txt -ct:cangjie -o:rime ./cj5_simp.dict.txt
 ```
