@@ -56,7 +56,6 @@ namespace Studyzy.IMEWLConverter.Generaters
             { '卜', "y" },
             { '曰', "a" },
             { '八', "c" },
-            { '儿', "c" },
             { '又', "e" },
             { '小', "f" },
             { '士', "g" },
