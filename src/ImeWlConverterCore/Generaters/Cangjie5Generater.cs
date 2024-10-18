@@ -90,6 +90,9 @@ namespace Studyzy.IMEWLConverter.Generaters
                         string[] arr = line.Split('\t');
                         try
                         {
+                            // skip the code with prefix 'x' for duplicate code
+                            if (arr[1][0] == 'x') continue;
+
                             char word = arr[0][0];
                             var cj = new Cangjie();
                             cj.Code = arr[1];

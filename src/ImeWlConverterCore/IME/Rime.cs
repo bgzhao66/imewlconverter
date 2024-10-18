@@ -78,32 +78,10 @@ namespace Studyzy.IMEWLConverter.IME
         public string ExportLine(WordLibrary wl)
         {
             var sb = new StringBuilder();
-            if (
-                this.CodeType == wl.CodeType
-                && this.CodeType != CodeType.Pinyin
-                && CodeType != CodeType.TerraPinyin
-            )
-            {
-                return wl.Word + "\t" + wl.Codes[0][0] + "\t" + wl.Rank;
-            }
-
-            if (codeGenerater == null)
-            {
-                codeGenerater = CodeTypeHelper.GetGenerater(CodeType);
-            }
-            try
-            {
-                codeGenerater.GetCodeOfWordLibrary(wl);
-            }
-            catch (Exception ex)
-            {
-                Debug.Fail(ex.Message);
-                return null;
-            }
 
             if (codeGenerater.Is1CharMutiCode)
             {
-                IList<string> codes = codeGenerater.GetCodeOfString(wl.Word).ToCodeString(" ");
+                IList<string> codes = wl.Codes[0];
                 int i = 0;
                 foreach (string code in codes)
                 {

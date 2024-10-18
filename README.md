@@ -73,3 +73,10 @@ PC 端：
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=studyzy/imewlconverter&type=Date)](https://star-history.com/#studyzy/imewlconverter&Date)
+
+## Usage
+
+命令行：
+```shell
+./ImeWlConverterCmd -i:rime ./cj5_simp.txt -ct:cangjie -o:rime ./cj5_simp.dict.txt
+```
